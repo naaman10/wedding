@@ -1,0 +1,24 @@
+[{
+    "name": "Naaman Hudson",
+    "id": "NH",
+    "details": {
+      "guests": ["Naaman Hudson","Sarah Lambrechts"],
+      "kids": ["Rhubarb"]
+    }
+  },
+  {
+    "name": "Joe Hudson",
+    "id": "JH",
+    "details": {
+      "guests": ["Joe Hudson","Hayley Hudson"],
+      "kids": ["Lily","Jesse","Joey"]
+    }
+  },
+ {
+   "name": "David Gray",
+   "id": "DG",
+   "details": {
+     "guests": ["Anne Le Fur"]
+   }
+ }
+]
