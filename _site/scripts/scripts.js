@@ -30,6 +30,7 @@ $("#rsvpPassword").submit(function(evt) {
               var details = data[name];
               var guestA = details.details.guests;
               var guestB = details.details.kids;
+              isPlural(guestA,guestB);
               $.each(guestA, function(key, value) {
                 $("#rsvpAdults").append('<li>' + value + '</li>');
               })
@@ -62,6 +63,18 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+function isPlural(adult, kids) {
+  let a = adult.length;
+  let b = kids.length;
+  if (a + b > 1) {
+    $('#plural1').append('We');
+    $('#plural2').append('We');
+  } else if (a + b == 1) {
+    $('#plural1').append('I');
+    $('#plural2').append('I');
+    $("#rsvpKidsText").remove();
+  }
 }
 var weddingDate = new Date("05/20/2023");
 var todaysDate = new Date();

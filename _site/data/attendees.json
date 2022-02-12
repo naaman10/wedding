@@ -18,7 +18,16 @@
    "name": "David Gray",
    "id": "DG",
    "details": {
-     "guests": ["Anne Le Fur"]
+     "guests": ["David Gray", "Anne Le Fur"],
+     "kids": []
+   }
+ },
+ {
+   "name": "John Paul",
+   "id": "JP",
+   "details": {
+     "guests": ["John Paul"],
+     "kids": []
    }
  }
 ]

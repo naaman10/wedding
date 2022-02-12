@@ -1,7 +1,7 @@
-<section class="container h-100">
-  <div class="row d-flex justify-content-center h-50 align-items-center">
+I"4<section class="container h-100">
+  <div class="row d-flex justify-content-center h-75 align-items-center">
     <div class="col-12 text-center my-3">
-      <h1 class="display-4 text-uppercase">RSVP</h1>
+      <h1>RSVP</h1>
       <p>Please RSVP by November 20, 2022</p>
     </div>
   </div>
@@ -14,10 +14,13 @@
       <form id="rsvpPassword">
         <p>Enter the wedding password</p>
         <div class="mb-3">
-          <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+          <label for="InputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="InputPassword1" />
         </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-responsive">Enter</button>
+        <button type="submit" class="btn btn-primary">Enter</button>
       </form>
     </div>
   </div>
 </section>
+
+:ET

@@ -11,6 +11,28 @@ p, h1, h2, h3, .offcanvas-title { font-family: freight-big-pro, serif; font-weig
 
 .section-rule { margin-left: auto; margin-right: auto; border-bottom: 1px solid black; width: 20%; align-self: flex-end; margin-bottom: 40px; }
 
-@media (max-width: 575.98px) { .top { background-size: 100%; } }
+.offcanvas .offcanvas-end { align-items: start; }
+
+.btn { border-radius: 0; border: none; font-family: freight-big-pro, serif; }
+
+.btn-primary { background-color: #3F622E; }
+
+.btn-primary:hover { background-color: #3F622E; opacity: .9; }
+
+.btn-outline-primary { border: 1px solid #3F622E; color: #3F622E; }
+
+.btn-outline-primary:hover { background-color: #3F622E; border: 1px solid #3F622E; color: white; }
+
+.btn-outline-primary:checked { background-color: #3F622E; color: white; }
+
+.btn-check { border: 1px solid #3F622E; }
+
+.btn-check:checked { background-color: #3F622E; color: white; }
+
+.btn-check:active + .btn-outline-primary, .btn-check:checked + .btn-outline-primary, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active { background-color: #3F622E; border: 1px solid #3F622E; color: white; }
+
+.form-control, .form-select { border: 1px solid black; border-radius: 0; font-family: freight-big-pro, serif; }
+
+@media (max-width: 575.98px) { .top { background-size: 100%; } .btn-responsive { width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

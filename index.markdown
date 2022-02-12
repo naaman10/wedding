@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+menus: home
 hero:
   title: Welcome to Bell Kennels
   hero_text: Quickly design and customize responsive mobile-first sites with Bootstrap,
@@ -14,3 +15,5 @@ hero:
     image: "/uploads/national-golden-retriever-day.jpg"
     alt_text: Doggo
 ---
+
+{% include hero.html %}

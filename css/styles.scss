@@ -3,6 +3,7 @@
 // fonts
 @import url('https://use.typekit.net/bgr1vie.css');
 // colours
+$primaryGreen: #3F622E;
 body {
   background-color: #fefefe;
 }
@@ -47,11 +48,64 @@ p,h1,h2,h3,.offcanvas-title {
   align-self: flex-end;
   margin-bottom: 40px;
 }
+.offcanvas .offcanvas-end {
+  align-items: start;
+}
+.btn {
+  border-radius: 0;
+  border: none;
+  font-family: freight-big-pro, serif;
+}
+.btn-primary {
+  background-color: #3F622E;
+  &:hover {
+    background-color: #3F622E;
+    opacity: .9;
+  }
+}
+.btn-outline-primary {
+  border: 1px solid $primaryGreen;
+  color: $primaryGreen;
+  &:hover {
+    background-color: $primaryGreen;
+    border: 1px solid $primaryGreen;
+    color: white;
+  }
+  &:checked {
+    background-color: $primaryGreen;
+    color: white;
+  }
+}
+.btn-check {
+  border: 1px solid $primaryGreen;
+  &:checked {
+    background-color: $primaryGreen;
+    color: white;
+  }
+}
+.btn-check:active+.btn-outline-primary,
+.btn-check:checked+.btn-outline-primary,
+.btn-outline-primary.active,
+.btn-outline-primary.dropdown-toggle.show,
+.btn-outline-primary:active {
+  background-color: $primaryGreen;
+  border: 1px solid $primaryGreen;
+  color: white;
+}
+.form-control, .form-select {
+  border: 1px solid black;
+  border-radius: 0;
+  font-family: freight-big-pro, serif;
+}
 $primary: #f08e80;
 $background: #DEEBE4;
+
 
 @media (max-width: 575.98px) {
   .top {
     background-size: 100%;
+  }
+  .btn-responsive {
+    width: 100%;
   }
 }

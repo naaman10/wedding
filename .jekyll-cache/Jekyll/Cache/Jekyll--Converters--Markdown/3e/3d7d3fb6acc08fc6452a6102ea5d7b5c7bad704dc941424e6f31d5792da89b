@@ -1,4 +1,4 @@
-<section class="container h-100">
+I"0<section class="container h-100">
   <div class="row d-flex justify-content-center h-50 align-items-center">
     <div class="col-12 text-center my-3">
       <h1 class="display-4 text-uppercase">RSVP</h1>
@@ -14,10 +14,12 @@
       <form id="rsvpPassword">
         <p>Enter the wedding password</p>
         <div class="mb-3">
-          <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+          &lt;input type="password" class="form-control" id="InputPassword1" "Password"&gt;
         </div>
         <button type="submit" class="btn btn-primary btn-lg btn-responsive">Enter</button>
       </form>
     </div>
   </div>
 </section>
+
+:ET

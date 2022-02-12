@@ -1,4 +1,4 @@
-<section class="hero text-center">
+I"=<section class="hero text-center">
   <div class="hero-container">
     <h1 class="display-4 text-uppercase">Sarah and Naaman</h1>
     <h2 class="text-uppercase">We're getting married.</h2>
@@ -6,3 +6,5 @@
     <p id="daysRemaining">Days Remaining </p>
   </div>
 </section>
+
+:ET

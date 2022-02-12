@@ -1,5 +1,14 @@
 <h2>Your Guests</h2>
 <p>Adults</p>
 <ul id="rsvpAdults"></ul>
-<p>Kids</p>
+<p id="rsvpKidsText">Kids</p>
 <ul id="rsvpKids"></ul>
+
+<form id="rsvpresponse">
+  <div class="btn-group form-check" role="group" aria-label="Basic example"">
+    <input type="radio" class="btn-check" id="rsvpAttending" name="rsvpAttending" autocomplete="off">
+    <label class="btn btn-outline-primary btn-lg" for="rsvpAttending"><span id="plural1"></span> will be coming</label>
+    <input type="radio" class="btn-check" id="rsvpNotAttending" name="rsvpAttending" autocomplete="off">
+    <label class="btn btn-outline-primary btn-lg" for="rsvpNotAttending"><span id="plural2"></span> won't make it</label>
+  </div>
+</form>
