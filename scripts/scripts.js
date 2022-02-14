@@ -29,6 +29,7 @@ $("#rsvpPassword").submit(function(evt) {
               var guestA = details.details.guests;
               var guestB = details.details.kids;
               isPlural(guestA,guestB);
+              gotKids(guestB);
               $.each(guestA, function(key, value) {
                 var i = Math.floor((Math.random() * 10) + 1);
                 var ii = key + i;
