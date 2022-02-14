@@ -126,8 +126,10 @@ function gotKids(kids) {
     $("#rsvpKidsText").remove();
   }
 }
-document.getElementById("rsvpResponseEveningButton").addEventListener("submit", handleEveningSubmit);
-document.getElementById("rsvpresponse").addEventListener("submit", handleCeremonySubmit);
+const rsvpEveForm = document.getElementById("rsvpResponseEvening");
+rsvpEveForm.addEventListener("submit", handleEveningSubmit);
+const eveCerForm = document.getElementById("rsvpresponse");
+rsvpCerForm.addEventListener("submit", handleCeremonySubmit);
 
 const handleEveningSubmit = (e) => {
   e.preventDefault();
