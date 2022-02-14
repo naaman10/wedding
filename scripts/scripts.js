@@ -126,6 +126,25 @@ function gotKids(kids) {
     $("#rsvpKidsText").remove();
   }
 }
+document.getElementById("rsvpResponseEveningButton").addEventListener("submit", handleEveningSubmit);
+document.getElementById("rsvpresponse").addEventListener("submit", handleCeremonySubmit);
+
+const handleEveningSubmit = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("rsvpResponseEvening");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
+const handleCeremonySubmit = (e) => {
+
+};
+
 var weddingDate = new Date("05/20/2023");
 var todaysDate = new Date();
 var dateDifferenceTime = todaysDate.getTime() - weddingDate.getTime();
