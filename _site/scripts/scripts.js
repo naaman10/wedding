@@ -126,26 +126,7 @@ function gotKids(kids) {
     $("#rsvpKidsText").remove();
   }
 }
-const rsvpEveForm = document.getElementById("rsvpResponseEvening");
-rsvpEveForm.addEventListener("submit", handleEveningSubmit);
-const eveCerForm = document.getElementById("rsvpresponse");
-rsvpCerForm.addEventListener("submit", handleCeremonySubmit);
 
-const handleEveningSubmit = (e) => {
-  e.preventDefault();
-  let myForm = document.getElementById("rsvpResponseEvening");
-  let formData = new FormData(myForm);
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
-const handleCeremonySubmit = (e) => {
-
-};
 
 var weddingDate = new Date("05/20/2023");
 var todaysDate = new Date();
