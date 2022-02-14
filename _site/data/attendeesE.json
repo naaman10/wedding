@@ -1,0 +1,25 @@
+[{
+    "name": "Andy Roberts",
+    "id": "NH",
+    "details": {
+      "guests": ["Andy Roberts","Jen Roberts"],
+      "kids": []
+    }
+  },
+  {
+    "name": "Joe Hudson",
+    "id": "JH",
+    "details": {
+      "guests": ["Joe Hudson","Hayley Hudson"],
+      "kids": ["Lily","Jesse","Joey"]
+    }
+  },
+ {
+   "name": "John Paul",
+   "id": "JP",
+   "details": {
+     "guests": ["John Paul"],
+     "kids": []
+   }
+ }
+]

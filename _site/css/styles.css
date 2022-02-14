@@ -33,6 +33,8 @@ p, h1, h2, h3, .offcanvas-title { font-family: freight-big-pro, serif; font-weig
 
 .form-control, .form-select { border: 1px solid black; border-radius: 0; font-family: freight-big-pro, serif; }
 
+#rsvpAdults, #rsvpKids { list-style: none; }
+
 @media (max-width: 575.98px) { .top { background-size: 100%; } .btn-responsive { width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

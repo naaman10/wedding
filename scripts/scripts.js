@@ -3,19 +3,16 @@ $("#rsvpPassword").submit(function(evt) {
   var password = document.getElementById('InputPassword1').value;
   if (password == "1") {
     $("#rsvpPages").load("ajax/rsvpPage2.html", function() {
+      $("#rsvpInfo").text('Find your party');
       let dropdown = $('#selectCeremony');
-
       dropdown.empty();
-
       dropdown.append('<option selected="true" disabled>Select your name</option>');
       dropdown.prop('selectedIndex', 0);
-
       const url = 'data/attendees.json';
       // Populate dropdown with list of provinces
       $.getJSON(url, function(data) {
         $.each(data, function(key, entry) {
           dropdown.append($('<option></option>').attr('value', key).text(entry.name));
-
         })
       }).done(function() {
         $("#rsvpName").submit(function(evt) {
@@ -24,6 +21,7 @@ $("#rsvpPassword").submit(function(evt) {
           console.log(name);
           document.cookie = 'name=' + name;
           $("#rsvpPages").load("ajax/rsvpPage3.html", function() {
+            $("#rsvpInfo").text('Your party details');
             const url = 'data/attendees.json';
             $.getJSON(url, function(data) {
               var i = getCookie("name");
@@ -32,10 +30,14 @@ $("#rsvpPassword").submit(function(evt) {
               var guestB = details.details.kids;
               isPlural(guestA,guestB);
               $.each(guestA, function(key, value) {
-                $("#rsvpAdults").append('<li>' + value + '</li>');
+                var i = Math.floor((Math.random() * 10) + 1);
+                var ii = key + i;
+                $("#rsvpAdults").append('<li><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault' + ii + '"><label class="form-check-label" for="flexCheckDefault' + ii + '">' + value + '</label></div></li>');
               })
               $.each(guestB, function(key, value) {
-                $("#rsvpKids").append('<li>' + value + '</li>');
+                var i = Math.floor((Math.random() * 10) + 1);
+                var ii = key + i;
+                $("#rsvpKids").append('<li><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault' + ii + '"><label class="form-check-label" for="flexCheckDefault' + ii + '">' + value + '</label></div></li>');
               })
             })
           })
@@ -43,7 +45,48 @@ $("#rsvpPassword").submit(function(evt) {
       });
     });
   } else if (password == "evening") {
-    alert("You have been invited to the Evening Celebration")
+    $("#rsvpPages").load("ajax/rsvpPage2.html", function() {
+      $("#rsvpInfo").text('Find your party');
+      let dropdown = $('#selectCeremony');
+      dropdown.empty();
+      dropdown.append('<option selected="true" disabled>Select your name</option>');
+      dropdown.prop('selectedIndex', 0);
+      const url = 'data/attendeesE.json';
+      $.getJSON(url, function(data) {
+        $.each(data, function(key, entry) {
+          dropdown.append($('<option></option>').attr('value', key).text(entry.name));
+        })
+      }).done(function() {
+        $("#rsvpName").submit(function(evt) {
+          evt.preventDefault();
+          var name = $("#selectCeremony").val();
+          console.log(name);
+          document.cookie = 'name=' + name;
+          $("#rsvpPages").load("ajax/rsvpPage4.html", function() {
+            $("#rsvpInfo").text('Your party details');
+            const url = 'data/attendeesE.json';
+            $.getJSON(url, function(data) {
+              var i = getCookie("name");
+              var details = data[name];
+              var guestA = details.details.guests;
+              var guestB = details.details.kids;
+              isPlural(guestA,guestB);
+              gotKids(guestB);
+              $.each(guestA, function(key, value) {
+                var i = Math.floor((Math.random() * 10) + 1);
+                var ii = key + i;
+                $("#rsvpAdults").append('<li><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault' + ii + '"><label class="form-check-label" for="flexCheckDefault' + ii + '">' + value + '</label></div></li>');
+              })
+              $.each(guestB, function(key, value) {
+                var i = Math.floor((Math.random() * 10) + 1);
+                var ii = key + i;
+                $("#rsvpKids").append('<li><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault' + ii + '"><label class="form-check-label" for="flexCheckDefault' + ii + '">' + value + '</label></div></li>');
+              })
+            })
+          })
+        });
+      });
+    });
   } else {
     alert("wrong password");
   }
@@ -73,6 +116,12 @@ function isPlural(adult, kids) {
   } else if (a + b == 1) {
     $('#plural1').append('I');
     $('#plural2').append('I');
+    $("#rsvpKidsText").remove();
+  }
+}
+function gotKids(kids) {
+  let a = kids.length;
+  if (a == 0) {
     $("#rsvpKidsText").remove();
   }
 }

@@ -1,14 +1,17 @@
 <h2>Your Guests</h2>
-<p>Adults</p>
+<p>Adults (please select who will be attending)</p>
 <ul id="rsvpAdults"></ul>
-<p id="rsvpKidsText">Kids</p>
+<p id="rsvpKidsText">Kids (please select who will be attending)</p>
 <ul id="rsvpKids"></ul>
-
+<div class="section-rule"></div>
 <form id="rsvpresponse">
-  <div class="btn-group form-check" role="group" aria-label="Basic example"">
-    <input type="radio" class="btn-check" id="rsvpAttending" name="rsvpAttending" autocomplete="off">
-    <label class="btn btn-outline-primary btn-lg" for="rsvpAttending"><span id="plural1"></span> will be coming</label>
-    <input type="radio" class="btn-check" id="rsvpNotAttending" name="rsvpAttending" autocomplete="off">
-    <label class="btn btn-outline-primary btn-lg" for="rsvpNotAttending"><span id="plural2"></span> won't make it</label>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Any dietry or allergy requirements?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
+  <div class="mb-3">
+    <label for="rsvpSongs" class="form-label">Song requests?</label>
+    <textarea id="rsvpSongs" class="form-control" name="rsvpSongs" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg btn-responsive">Send RSVP</button>
 </form>
