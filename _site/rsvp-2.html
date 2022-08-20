@@ -1,0 +1,72 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSVP-2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end align-items-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="top">
+
+</div>
+
+
+<section class="container h-100">
+  <div class="row d-flex justify-content-center h-50 align-items-center">
+    <div class="col-12 text-center my-3">
+      <h1 class="display-4 text-uppercase">RSVP</h1>
+      <p>Please RSVP by November 20, 2022</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h3>Please provide your RSVP Details</h3>
+      <p id="rsvpInfo">Log in to find your details</p>
+    </div>
+    <div class="col-12 col-md-6" id="rsvpPages">
+      <form id="rsvpLogin" name="rsvpLogin">
+        <p>Enter the wedding password</p>
+        <div class="mb-3">
+          <label for="rsvpEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="rsvpEmail" placeholder="name@example.com" />
+        </div>
+        <div class="mb-3">
+          <label for="rsvpPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="InputPassword1" placeholder="Password" />
+          <div class="invalid-feedback " id="passwordValidation">
+            Incorrect password
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-responsive" id="rsvpLoginEnter">Enter</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c26d8f910e.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/scripts/scripts.js"></script>
+
