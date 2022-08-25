@@ -159,7 +159,7 @@ function rsvpLogin() {
 } 
 
 function redirect(i) {
-  window.location.href = "/rsvp/send";
+  window.location.href = "./rsvp/send";
 }
 
 window.onload = function() {
@@ -170,13 +170,13 @@ window.onload = function() {
      if (login !== null) {
        ceremony();
      } else {
-      window.location.href = "/rsvp"
+      window.location.href = "./rsvp"
        
      }
   } else if (pageTitle == "/rsvp/") {
     var login = localStorage.getItem("id");
     if (login !== null) {
-      window.location.href = "/rsvp/send"
+      window.location.href = "./rsvp/send"
     }
   }
 };

@@ -151,14 +151,14 @@ function rsvpLogin() {
     console.log(password);
     localStorage.setItem("invite", password);
     localStorage.setItem("id", document.getElementById("rsvpEmail").value)
-    redirect(password)
+    redirect()
   } else {
     var element = document.getElementById('InputPassword1');
     element.classList.add("is-invalid");
   }
 } 
 
-function redirect(i) {
+function redirect() {
   window.location.href = "/rsvp/send";
 }
 
