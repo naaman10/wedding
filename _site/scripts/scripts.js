@@ -137,18 +137,69 @@ result = result.toString();
 result1 = result.substring(1);
 $('#daysRemaining').append(result1);
 
-
-document.getElementById('rsvpLoginEnter').addEventListener('click', rsvpLogin);
+const rsvpLoginBtn = document.getElementById('rsvpLoginEnter');
+if (rsvpLoginBtn) {
+  rsvpLoginBtn.addEventListener('click', () => {
+    rsvpLogin();
+  });
+}
 
 function rsvpLogin() {
   console.log("submitted");
   let password = document.getElementById("InputPassword1").value
-  if (password == 123) {
+  if (password == "ceremony" || password == "evening") {
     console.log(password);
-  } else if (password == "out") {
-    console.log(password);
+    localStorage.setItem("invite", password);
+    localStorage.setItem("id", document.getElementById("rsvpEmail").value)
+    redirect(password)
   } else {
     var element = document.getElementById('InputPassword1');
     element.classList.add("is-invalid");
   }
+} 
+
+function redirect(i) {
+  window.location.href = "/rsvp/send";
+}
+
+window.onload = function() {
+  let pageTitle = window.location.pathname;
+  if (pageTitle == "/rsvp/send") {
+    var login = localStorage.getItem("invite");
+    console.log(login);
+     if (login !== null) {
+       ceremony();
+     } else {
+      window.location.href = "/rsvp"
+       
+     }
+  } else if (pageTitle == "/rsvp/") {
+    var login = localStorage.getItem("id");
+    if (login !== null) {
+      window.location.href = "/rsvp/send"
+    }
+  }
+};
+
+function ceremony() {
+  let inviteType = localStorage.getItem("invite");
+  updateEmail();
+  if (inviteType == "ceremony") {
+    let contentTime = "13:00 onwards"
+    let contentType = "Our Ceremony & Evening Celebration";
+    document.getElementById("inviteType").insertAdjacentHTML("afterend", contentType);
+    document.getElementById("inviteTime").insertAdjacentHTML("afterend", contentTime);
+  } 
+  if (inviteType == "evening") {
+    let contentTime = "19:00 onwards"
+    let contentType = "Our Evening Celebration";
+    document.getElementById("inviteType").insertAdjacentHTML("afterend", contentType);
+    document.getElementById("inviteTime").insertAdjacentHTML("afterend", contentTime);
+  }
+  
+}
+
+function updateEmail() {
+  let email = localStorage.getItem("id");
+  document.getElementById("emailAddress").value = email;
 }

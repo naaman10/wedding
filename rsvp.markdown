@@ -5,5 +5,5 @@ menus: rsvp
 permalink: /rsvp
 ---
 
+{% include rsvpLogin.html %}
 
-{% include rsvp.html %}

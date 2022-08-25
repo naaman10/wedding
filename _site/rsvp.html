@@ -19,7 +19,12 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          
+            <li class="nav-item">
+              <a href="/" class="nav-link" title="Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/rsvp" class="nav-link" title="RSVP">RSVP</a>
+            </li>
         </ul>
       </div>
     </div>
@@ -33,7 +38,7 @@
 
 <section class="container h-100">
   <div class="row d-flex justify-content-center h-50 align-items-center">
-    <div class="col-12 text-center my-3">
+    <div class="col-12 text-center my-3" id="rsvpIntro">
       <h1 class="display-4 text-uppercase">RSVP</h1>
       <p>Please RSVP by November 20, 2022</p>
     </div>
@@ -44,12 +49,20 @@
       <p id="rsvpInfo">Log in to find your details</p>
     </div>
     <div class="col-12 col-md-6" id="rsvpPages">
-      <form id="rsvpPassword">
+      <form id="rsvpLogin" name="rsvpLogin">
         <p>Enter the wedding password</p>
         <div class="mb-3">
-          <input type="password" class="form-control" id="InputPassword1" placeholder="Password" />
+          <label for="rsvpEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="rsvpEmail" placeholder="name@example.com" />
         </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-responsive">Enter</button>
+        <div class="mb-3">
+          <label for="rsvpPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="InputPassword1" placeholder="Password" />
+          <div class="invalid-feedback " id="passwordValidation">
+            Incorrect password
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-responsive" id="rsvpLoginEnter">Enter</button>
       </form>
     </div>
   </div>
