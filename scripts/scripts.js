@@ -159,24 +159,24 @@ function rsvpLogin() {
 } 
 
 function redirect(i) {
-  window.location.href = "./rsvp/send";
+  window.location.href = "/rsvp/send";
 }
 
 window.onload = function() {
-  let pageTitle = window.location.pathname;
-  if (pageTitle == "/rsvp/send") {
+  let pageTitle = document.title;
+  if (pageTitle == "Send Your RSVP") {
     var login = localStorage.getItem("invite");
     console.log(login);
      if (login !== null) {
        ceremony();
      } else {
-      window.location.href = "./rsvp"
+      window.location.href = "/rsvp"
        
      }
-  } else if (pageTitle == "/rsvp/") {
+  } else if (pageTitle == "RSVP") {
     var login = localStorage.getItem("id");
     if (login !== null) {
-      window.location.href = "./rsvp/send"
+      window.location.href = "/rsvp/send"
     }
   }
 };
